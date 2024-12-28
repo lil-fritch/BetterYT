@@ -7,12 +7,18 @@
     "icons": {
       "48": "icons/BetterYT-48.png"
     },
-  
+    "permissions": [
+      "storage"
+    ],
+    "browser_action": {
+      "default_popup": "src/window.html",
+      "default_icon": "icons/BetterYT-48.png"
+    },
     "content_scripts": [
       {
         "matches": ["*://*.youtube.com/*"],
-        "js": ["/src/main.js"]
+        "js": ["src/main.js"]
       }
     ]
-  
   }
+  
