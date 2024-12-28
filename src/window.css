@@ -1,0 +1,89 @@
+:root {
+    /*--white-color: #FFFFFF;*/
+    /*--main-color: #;*/
+    /*--boarder-color: #;*/
+    /*--text-color: #;*/
+    /*--accent-color: #;*/
+    /*--hover-color: #;*/
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    width: 270px;
+    height: 360px;
+    background: #282828;
+    overflow: hidden;
+    user-select: none;
+}
+
+.main-btn {
+    position: absolute;
+    width: 160px;
+    height: 120px;
+    flex-shrink: 0;
+    left: 55px;
+    top: 43px;
+    z-index: 10;
+}
+
+.main-btn rect {
+    fill: url(#normalGradient);
+}
+
+/* При наведении */
+.main-btn:hover rect {
+    fill: #FF0000;
+}
+
+/* При нажатии (выключенное состояние) */
+.main-btn:active rect {
+    fill: url(#disabledGradient);
+}
+
+.main-btn:hover:active rect {
+    fill: url(#hoverDisabledGradient);
+}
+
+.elements {
+    position: fixed;
+    width: 300px;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 350px;
+    background: rgba(217, 217, 217, 0.10);
+    filter: blur(50px);
+}
+
+.params, .info {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 35px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.params {
+    top: 196px;
+    border: 1px solid #606060;
+    background: linear-gradient(90deg, rgba(96, 96, 96, 0.50) 0%, rgba(156, 156, 156, 0.50) 100%);
+    display: flex;
+}
+
+.info {
+    top: 246px;
+    height: 80px;
+    border: 1px solid #9C9C9C;
+}
+
+.text {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
